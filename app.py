@@ -35,19 +35,8 @@ def verify_hashes(password,hashed_text):
 
 best_feature =  ['ascites', 'bilirubin', 'albumin', 'spiders','alk_phosphate','protime','age','varices','malaise','histology']
 
-gender_dict = {"male":1,"female":2}
 feature_dict = {"No":1,"Yes":2}
 
-
-def get_value(val,my_dict):
-	for key,value in my_dict.items():
-		if val == key:
-			return value 
-
-def get_key(val,my_dict):
-	for key,value in my_dict.items():
-		if val == key:
-			return key
 
 def get_fvalue(val):
 	feature_dict = {"No":1,"Yes":2}
@@ -103,7 +92,6 @@ def load_image(img):
 
 def main():
 	"""Hep Mortality Prediction App"""
-	# st.title("Hepatitis Mortality Prediction App")
 	st.markdown(html_temp.format('purple'),unsafe_allow_html=True)
 
 	menu = ["Home","Login","Signup"]
@@ -243,7 +231,6 @@ def main():
 
 			else:
 				st.warning("Passwords does not match..!!")
-
 
 
 
