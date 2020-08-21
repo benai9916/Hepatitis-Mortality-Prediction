@@ -57,6 +57,11 @@ html_temp = """
 		</div>
 		"""
 
+read_more = """ 
+		<div style="font-size: 28px; margin-top: 20px; margin-bottom: 40px;"> Read about Hepatitis Lab Test report in detail 
+		<a href="https://labtestsonline.org/conditions/hepatitis"> here.</a> </div>
+		 """
+
 prescriptive_message_temp ="""
 	<div style="background-color:lightgray;overflow-x: auto; padding:10px;border-radius:5px;margin:10px;">
 		<h3 style="text-align:justify;color:black;padding:10px">Recommended Life style modification</h3>
@@ -101,6 +106,8 @@ def main():
 	if choice == "Home":
 		st.subheader("Home")
 		st.markdown(descriptive_message_temp,unsafe_allow_html=True)
+
+		st.markdown(read_more, unsafe_allow_html=True)
 		
 		st.image(load_image('image/hepatitis.jpg'))
 
